@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center fs-2 mt-5">Your Details</h1>
+    <form name="form" class="row g-2" action="success.html" onsubmit=" return (validate())" >
+          <label for="name" class="form-label">  NAME</label>
+          <input type="text" name="name" id="name" class="form-control" autofocus>
+          <div class="invalid">
+              <p class="name"></p>
+      </div>
+
+      <label for="user" class="form-label">  USERNAME</label>
+      <input type="text" name="username" id="user" class="form-control">
+      <div class="invalid">
+          <p class="uname"></p>
+      </div>
+
+      <label for="email" class="form-label">EMAIL</label>
+      <input type="email" name="email" id="email" class="form-control">
+      <div class="invalid">
+          <p class="etext"></p>
+      </div>
+  
+   
+       <div class="form-group">
+          <label for="" class="form-check-label">GENDER :</label>
+           <label for="male" class="form-label ">&nbsp MALE</label>
+           <input class="form-check-input" type="radio" name="gender" id="male">
+           <label for="female" class="form-check-label ">&nbsp FEMALE</label>
+           <input class="form-check-input" type="radio" name="gender" id="female">
+          <div class="invalid">
+              <p class="gender"></p>
+          </div>
+   </div>
+  
+ 
+  <div class="mb-1">
+
+   <div class="mb-1">
+       <label for="add" class="form-label">ADDRESS</label>
+       <textarea name="address" id="add" cols="3" rows="3" class="form-control"></textarea>
+       <div class="invalid">
+           <p class="add"></p>
+       </div>
+   </div>
+
+   <label for="city" class="form-label">CITY</label>
+   <select  class="form-select" name="city" id="">
+       <option value="">Select City</option>
+       <option value="erode">ERODE</option>
+       <option value="tirupur">TIRUPUR</option>
+       <option value="perundurai">PERUNDURAI</option>
+       <option value="salem">SALEM</option>
+   </select>
+   <div class="invalid">
+       <p class="city"></p>
+   </div>
+  </div>
+
+   <label for="phone" class="form-label">PHONE</label>
+      <input type="tel" class="form-control" name="phone" id="">
+      <div class="invalid">
+          <p class="mobile"></p>
+      </div>
+
+      <div class="mb-1">
+        <label for="pass" class="form-label">PASSWORD</label>
+        <input type="password" name="password" id="pass" class="form-control">
+        <div class="invalid">
+            <p class="pass"></p>
+        </div>
+    </div>
+
+   <div class="mb-1">
+      <input type="checkbox" name="check" class="form-check-input" id="agree">
+      <label for="agree" class="form-check-label">&nbsp I HEREBY DECLARE THAT ABOVE MENTIONED DETAILS ARE TRUE</label>
+      <div class="invalid">
+          <p class="check"></p>
+      </div>
+   </div>
+
+      <button  class="btn btn-success my-5" >Submit</button>
+  </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
